@@ -99,7 +99,7 @@ class Main extends PluginBase implements Listener{
                 $effectID = Effect::getEffect((int) $effect["effect"]);
                 $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 0;
                 $visible = isset($effect["visible"]) ? (bool) $effect["visible"] : false;
-                $entity->addEffect(new EffectInstance($effectID, 120000, $amplifier - 1, $visible));
+                $entity->addEffect(new EffectInstance($effectID, 119999, $amplifier - 1, $visible));
             }
         }
         if ($boots == 313 && $legs == 312 && $chest == 311 && $helmet == 310) {
@@ -109,7 +109,27 @@ class Main extends PluginBase implements Listener{
                 $effectID = Effect::getEffect((int) $effect["effect"]);
                 $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 0;
                 $visible = isset($effect["visible"]) ? (bool) $effect["visible"] : false;
-                $entity->addEffect(new EffectInstance($effectID, 120000, $amplifier - 1, $visible));
+                $entity->addEffect(new EffectInstance($effectID, 119999, $amplifier - 1, $visible));
+            }
+        }
+        if ($boots == 309 && $legs == 308 && $chest == 307 && $helmet == 306) {
+            $minor = $this->config->get("minor-armor");
+            foreach($minor as $effect){
+                if(!isset($effect["effect"]))continue;
+                $effectID = Effect::getEffect((int) $effect["effect"]);
+                $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 0;
+                $visible = isset($effect["visible"]) ? (bool) $effect["visible"] : false;
+                $entity->addEffect(new EffectInstance($effectID, 119999, $amplifier - 1, $visible));
+            }
+        }
+        if ($boots == 301 && $legs == 300 && $chest == 299 && $helmet == 298) {
+            $archer = $this->config->get("archer-armor");
+            foreach($archer as $effect){
+                if(!isset($effect["effect"]))continue;
+                $effectID = Effect::getEffect((int) $effect["effect"]);
+                $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 0;
+                $visible = isset($effect["visible"]) ? (bool) $effect["visible"] : false;
+                $entity->addEffect(new EffectInstance($effectID, 119999, $amplifier - 1, $visible));
             }
         }
     }
@@ -128,6 +148,22 @@ class Main extends PluginBase implements Listener{
         if($oldItem == 310 OR $oldItem == 311 OR $oldItem == 312 OR $oldItem == 313) {
             $diamond = $this->config->get("diamond-armor");
             foreach($diamond as $effect){
+                if(!isset($effect["effect"]))continue;
+                $effectID = $effect["effect"];
+                $entity->removeEffect($effectID);
+            }
+        }
+        if($oldItem == 306 OR $oldItem == 307 OR $oldItem == 308 OR $oldItem == 309) {
+            $minor = $this->config->get("minor-armor");
+            foreach($minor as $effect){
+                if(!isset($effect["effect"]))continue;
+                $effectID = $effect["effect"];
+                $entity->removeEffect($effectID);
+            }
+        }
+        if($oldItem == 301 OR $oldItem == 300 OR $oldItem == 299 OR $oldItem == 298) {
+            $archer = $this->config->get("archer-armor");
+            foreach($archer as $effect){
                 if(!isset($effect["effect"]))continue;
                 $effectID = $effect["effect"];
                 $entity->removeEffect($effectID);

@@ -1,4 +1,4 @@
-# -=ROGUE MISC=-
+# -=ROGUE BACKSTAB=-
 
 cooldown: 30		#Cooldown on backstabbing (gold swords)
 
@@ -26,13 +26,13 @@ rogue-armor:		#Effects given to the player wearing rogue armor (full chain mail 
     effect: 1		#Effect's ID (Refer to list bellow)
     amplifier: 2	#Effect's amplifier
     visible: false	#Show particles or not? (true/false)
-  "jump":
-    effect: 8
-    amplifier: 2
-    visible: false
   "night":
     effect: 16
     amplifier: 1
+    visible: false
+  "jump":
+    effect: 8
+    amplifier: 2
     visible: false
   "res":
     effect: 11
@@ -49,6 +49,47 @@ diamond-armor:		#Effects given to the player wearing rogue armor (full chain mai
     effect: 16
     amplifier: 1
     visible: false
+
+# -=MINOR ARMOR=-
+minor-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+  "speeeeed":		#Title (Can be anything)
+    effect: 1		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    visible: false	#Show particles or not? (true/false)
+  "night":
+    effect: 16
+    amplifier: 1
+    visible: false
+  "haste":
+    effect: 3
+    amplifier: 2
+    visible: false
+  "fire":
+    effect: 12
+    amplifier: 1
+    visible: false
+
+# -=ARCHER ARMOR=-
+archer-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+  "speeeeed":		#Title (Can be anything)
+    effect: 1		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    visible: false	#Show particles or not? (true/false)
+  "night":
+    effect: 16
+    amplifier: 1
+    visible: false
+  "jump":
+    effect: 8
+    amplifier: 2
+    visible: false
+  "res":
+    effect: 11
+    amplifier: 2
+    visible: false
+
+# -=BARD ARMOR=-
+#Coming Soon...
 
 # Here's a list of all available effects with their IDs
 # ABSORPTION = 22
