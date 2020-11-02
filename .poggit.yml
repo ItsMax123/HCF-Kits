@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ItsMax123/HCF-Kits
+build-by-default: true
+branches:
+- master
+projects:
+  HCF-Kits:
+    path: ""
+...
