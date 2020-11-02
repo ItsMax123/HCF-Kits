@@ -39,17 +39,23 @@ When a rogue backstabs someone, the victim will loose 50% of their current healt
 
 ## Diamond
 
+Diamond: A player with full diamond armor.
+
 | Status | Diamond |
 | :-: | --- |
 | ✔ | Armor Effects (Configurable) |
 
 ## Minor
 
+Minor: A player with full iron armor.
+
 | Status | Minor |
 | :-: | --- |
 | ✔ | Armor Effects (Configurable) |
 
 ## Arher
+
+Archer: A player with full leather armor.
 
 | Status | Archer |
 | :-: | --- |
