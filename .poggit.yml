@@ -5,4 +5,6 @@ branches:
 projects:
   HCF-Kits:
     path: ""
+    lint:
+      phpstan: false
 ...
