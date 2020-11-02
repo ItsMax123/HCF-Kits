@@ -1,0 +1,85 @@
+# -=ROGUE MISC=-
+
+cooldown: 30		#Cooldown on backstabbing (gold swords)
+
+attacker-effects: true	#Should effects be given to the attacker of a backstab? (true/false)
+attacker:
+  "slowwwness":		#Title (Can be anything)
+    effect: 2		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    duration: 10	#Effect's duration (In seconds)
+
+victim-effects: true	#Should effects be given to the victim of a backstab? (true/false)
+victim:
+  "speed":		#Title (Can be anything)
+    effect: 19		#Effect's ID (Refer to list bellow)
+    amplifier: 1	#Effect's amplifier
+    duration: 5		#Effect's duration (In seconds)
+  "blind":
+    effect: 15
+    amplifier: 1
+    duration: 5
+
+# -=ROGUE ARMOR=-
+rogue-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+  "speeeeed":		#Title (Can be anything)
+    effect: 1		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    visible: false	#Show particles or not? (true/false)
+  "jump":
+    effect: 8
+    amplifier: 2
+    visible: false
+  "night":
+    effect: 16
+    amplifier: 1
+    visible: false
+  "res":
+    effect: 11
+    amplifier: 2
+    visible: false
+
+# -=DIAMOND ARMOR=-
+diamond-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+  "speeeeed":		#Title (Can be anything)
+    effect: 1		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    visible: false	#Show particles or not? (true/false)
+  "night":
+    effect: 16
+    amplifier: 1
+    visible: false
+
+# Here's a list of all available effects with their IDs
+# ABSORPTION = 22
+# BLINDNESS = 15
+# CONDUIT_POWER = 26
+# CONFUSION = 9
+# DAMAGE_RESISTANCE = 11
+# FATAL_POISON = 25
+# FATIGUE = 4
+# FIRE_RESISTANCE = 12
+# HARMING = 7
+# HASTE = 3
+# HEALING = 6
+# HEALTH_BOOST = 21
+# HUNGER = 17
+# INSTANT_DAMAGE = 7
+# INSTANT_HEALTH = 6
+# INVISIBILITY = 14
+# JUMP = 8
+# JUMP_BOOST = 8
+# LEVITATION = 24
+# MINING_FATIGUE = 4
+# NAUSEA = 9
+# NIGHT_VISION = 16
+# POISON = 19
+# REGENERATION = 10
+# RESISTANCE = 11
+# SATURATION = 23
+# SLOWNESS = 2
+# SPEED = 1
+# STRENGTH = 5
+# WATER_BREATHING = 13
+# WEAKNESS = 18
+# WITHER = 20

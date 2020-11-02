@@ -1,0 +1,6 @@
+---
+name: HCF-Kits
+version: 1.0.0
+main: ItsMax123\HCF\Main
+api: 3.15.2
+...
