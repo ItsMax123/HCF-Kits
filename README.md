@@ -7,8 +7,8 @@ Open source HCF kits plugin.
 | ✔ | Pots | DONE! |
 | ✔ | Rogue | DONE! |
 | ✔ | Diamond | DONE! |
-| ❌ | Minor | Add armor effects |
-| ❌ | Archer | Add armor effects, better arrows, item effects |
+| ✔ | Minor | DONE! |
+| ⚠ | Archer | Better bows, item effects |
 | ❌ | Bard | Faction plugin support, Armor effect, Team effects |
 
 # Features
@@ -17,6 +17,8 @@ Open source HCF kits plugin.
 | Status | Pots |
 | :-: | --- |
 | ✔ | Better Splash Radius for Instant Healing 2 and 1. |
+
+
 
 ## Rogue
 
@@ -35,8 +37,22 @@ When a rogue backstabs someone, the victim will loose 50% of their current healt
 | ✔ | Need gold sword to backstab |
 | ✔ | Need chainmail armor to backstab |
 
-## Pots
+## Diamond
 
 | Status | Diamond |
 | :-: | --- |
 | ✔ | Armor Effects (Configurable) |
+
+## Minor
+
+| Status | Minor |
+| :-: | --- |
+| ✔ | Armor Effects (Configurable) |
+
+## Arher
+
+| Status | Archer |
+| :-: | --- |
+| ✔ | Armor Effects (Configurable) | 
+| ✔ | Better bows | 
+| ✔ | Item effects  | 
