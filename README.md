@@ -54,5 +54,5 @@ When a rogue backstabs someone, the victim will loose 50% of their current healt
 | Status | Archer |
 | :-: | --- |
 | ✔ | Armor Effects (Configurable) | 
-| ✔ | Better bows | 
-| ✔ | Item effects  | 
+| ❌ | Better bows | 
+| ❌ | Item effects  | 
