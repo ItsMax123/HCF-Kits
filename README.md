@@ -1,4 +1,5 @@
 > Lastest stable version *(on Nov 1st 2020)*: **v1.0.0**
+
 # HCF-Kits
 Open source HCF kits plugin. 
 
@@ -6,10 +7,10 @@ Open source HCF kits plugin.
 | :-: | --- | --- |
 | ✔ | Pots | DONE! |
 | ✔ | Rogue | DONE! |
+| ⚠ | Bard | Configurable Bard range & More faction plugins support |
 | ✔ | Diamond | DONE! |
+| ⚠ | Archer | Better bows, personnal item effects |
 | ✔ | Minor | DONE! |
-| ⚠ | Archer | Better bows, item effects |
-| ❌ | Bard | Faction plugin support, Armor effect, Team effects |
 
 # Features
 ## Pots
@@ -17,8 +18,6 @@ Open source HCF kits plugin.
 | Status | Pots |
 | :-: | --- |
 | ✔ | Better Splash Radius for Instant Healing 2 and 1. |
-
-
 
 ## Rogue
 
@@ -37,19 +36,31 @@ When a rogue backstabs someone, the victim will loose 50% of their current healt
 | ✔ | Need gold sword to backstab |
 | ✔ | Need chainmail armor to backstab |
 
+## Bard
+
+**WARNING**: For bard to work with faction members, you need to have the PiggyFactions plugin installed. I will add other compatibility to other faction plugins if anyone asks me to add it in issue.
+
+Bard: A player with full gold armor.
+
+Effect Item: Item that has an effect assigned to it in config.
+
+A bard has 2 abilities:
+- When a bard is holding an Effect Item, the effect assigned to that Item will be given to all faction members within bard range. There is no cooldown for this ability, so you can scroll over your hotbar and give all effects very fast.
+- When a bard clicks an Effect Item, the effect assigned to that Item will be given (with an amplifier of +1)to all faction members within bard range and the bard cooldown will start for that Effect Item specifically.
+
+| Status | Bard |
+| :-: | --- |
+| ✔ | Armor Effects (Configurable) |
+| ✔ | PiggyFactions Support |
+| ✔ | Team Effects (Configurable) |
+| ❌ | Configurable Bard range |
+| ❌ | More Faction Plugins Support |
+
 ## Diamond
 
 Diamond: A player with full diamond armor.
 
 | Status | Diamond |
-| :-: | --- |
-| ✔ | Armor Effects (Configurable) |
-
-## Minor
-
-Minor: A player with full iron armor.
-
-| Status | Minor |
 | :-: | --- |
 | ✔ | Armor Effects (Configurable) |
 
@@ -62,3 +73,11 @@ Archer: A player with full leather armor.
 | ✔ | Armor Effects (Configurable) | 
 | ❌ | Better bows | 
 | ❌ | Item effects  | 
+
+## Minor
+
+Minor: A player with full iron armor.
+
+| Status | Minor |
+| :-: | --- |
+| ✔ | Armor Effects (Configurable) |

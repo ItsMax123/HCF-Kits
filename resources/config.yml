@@ -1,6 +1,5 @@
 # -=ROGUE BACKSTAB=-
-
-cooldown: 30		#Cooldown on backstabbing (gold swords)
+rogue-cooldown: 30	#Cooldown on backstabbing (gold swords)
 
 attacker-effects: true	#Should effects be given to the attacker of a backstab? (true/false)
 attacker:
@@ -12,13 +11,58 @@ attacker:
 victim-effects: true	#Should effects be given to the victim of a backstab? (true/false)
 victim:
   "speed":		#Title (Can be anything)
-    effect: 19		#Effect's ID (Refer to list bellow)
+    effect: 		#Effect's ID (Refer to list bellow)
     amplifier: 1	#Effect's amplifier
     duration: 5		#Effect's duration (In seconds)
   "blind":
-    effect: 15
+    effect: 
     amplifier: 1
     duration: 5
+
+
+
+# -=BARD TEAM EFFECTS=-
+bard-cooldown: 30	#Cooldown on barding (Team effects)
+
+bard-items:		
+  "Strength-Blaze":	#Title (Can be anything)
+    name: "Strength"	#Name of the effect in messages
+    item: 377		#Numerical ID of the item that will give the effect (Go to https://minecraft-ids.grahamedgecombe.com/ to find the ID) 
+    effect: 5		#Effect's ID (Refer to list bellow)
+    amplifier: 1	#Effect's amplifier
+    duration: 5		#Effect's duration (In seconds)
+  "Resistance-Iron":
+    name: "Resistance"
+    item: 265
+    effect: 11
+    amplifier: 1
+    duration: 5
+  "Regen-Ghasttear":
+    name: "Regeneration"
+    item: 370
+    effect: 10
+    amplifier: 1
+    duration: 5
+  "Speed-Sugar":
+    name: "Speed"
+    item: 353
+    effect: 1
+    amplifier: 2
+    duration: 5
+  "Jump-Feather":
+    name: "Jump Boost"
+    item: 288
+    effect: 8
+    amplifier: 2
+    duration: 5
+  "Fire-Magma":
+    name: "Fire Resistance"
+    item: 378
+    effect: 12
+    amplifier: 1
+    duration: 5
+
+
 
 # -=ROGUE ARMOR=-
 rogue-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
@@ -39,8 +83,10 @@ rogue-armor:		#Effects given to the player wearing rogue armor (full chain mail 
     amplifier: 2
     visible: false
 
+
+
 # -=DIAMOND ARMOR=-
-diamond-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+diamond-armor:		#Effects given to the player wearing diamond armor (full diamond armor)
   "speeeeed":		#Title (Can be anything)
     effect: 1		#Effect's ID (Refer to list bellow)
     amplifier: 2	#Effect's amplifier
@@ -50,14 +96,20 @@ diamond-armor:		#Effects given to the player wearing rogue armor (full chain mai
     amplifier: 1
     visible: false
 
+
+
 # -=MINOR ARMOR=-
-minor-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+minor-armor:		#Effects given to the player wearing minor armor (full iron armor)
   "speeeeed":		#Title (Can be anything)
     effect: 1		#Effect's ID (Refer to list bellow)
     amplifier: 2	#Effect's amplifier
     visible: false	#Show particles or not? (true/false)
   "night":
     effect: 16
+    amplifier: 1
+    visible: false
+  "res":
+    effect: 11
     amplifier: 1
     visible: false
   "haste":
@@ -69,8 +121,10 @@ minor-armor:		#Effects given to the player wearing rogue armor (full chain mail 
     amplifier: 1
     visible: false
 
+
+
 # -=ARCHER ARMOR=-
-archer-armor:		#Effects given to the player wearing rogue armor (full chain mail armor)
+archer-armor:		#Effects given to the player wearing archer armor (full leather armor)
   "speeeeed":		#Title (Can be anything)
     effect: 1		#Effect's ID (Refer to list bellow)
     amplifier: 2	#Effect's amplifier
@@ -88,8 +142,24 @@ archer-armor:		#Effects given to the player wearing rogue armor (full chain mail
     amplifier: 2
     visible: false
 
+
+
 # -=BARD ARMOR=-
-#Coming Soon...
+bard-armor:		#Effects given to the player wearing bard armor (full gold armor)
+  "speeeeed":		#Title (Can be anything)
+    effect: 1		#Effect's ID (Refer to list bellow)
+    amplifier: 2	#Effect's amplifier
+    visible: false	#Show particles or not? (true/false)
+  "night":
+    effect: 16
+    amplifier: 1
+    visible: false
+  "res":
+    effect: 11
+    amplifier: 2
+    visible: false
+
+
 
 # Here's a list of all available effects with their IDs
 # ABSORPTION = 22
@@ -108,7 +178,6 @@ archer-armor:		#Effects given to the player wearing rogue armor (full chain mail
 # INSTANT_DAMAGE = 7
 # INSTANT_HEALTH = 6
 # INVISIBILITY = 14
-# JUMP = 8
 # JUMP_BOOST = 8
 # LEVITATION = 24
 # MINING_FATIGUE = 4
