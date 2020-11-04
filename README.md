@@ -1,3 +1,7 @@
+
+[![](https://poggit.pmmp.io/shield.state/HCF-Kits)](https://poggit.pmmp.io/p/HCF-Kits)
+<a href="https://poggit.pmmp.io/p/HCF-Kits"><img src="https://poggit.pmmp.io/shield.state/HCF-Kits"></a>
+
 > Lastest stable version *(on Nov 1st 2020)*: **v1.0.0**
 
 # HCF-Kits
