@@ -204,13 +204,13 @@ class Main extends PluginBase implements Listener{
                 $itemID = (int) $effect["item"];
                 if($item === $itemID) {
                     foreach($this->getServer()->getOnlinePlayers() as $onlineplayer){
-                        if($entity !== $onlineplayer) {
-                            $distance = $entity->distance($onlineplayer);
-                            if ($distance <= 30){
-                                $effectID = Effect::getEffect((int) $effect["effect"]);
-                                $duration = isset($effect["duration"]) ? (int) $effect["duration"] : 10;
-                                $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 1;
-                                $entity->addEffect(new EffectInstance($effectID, $duration * 20, $amplifier - 1));
+                        $distance = $entity->distance($onlineplayer);
+                        if ($distance <= 30){
+                            $effectID = Effect::getEffect((int) $effect["effect"]);
+                            $duration = isset($effect["duration"]) ? (int) $effect["duration"] : 10;
+                            $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] : 1;
+                            $entity->addEffect(new EffectInstance($effectID, $duration * 20, $amplifier - 1));
+                            if($entity !== $onlineplayer) {
                                 $PiggyFactions = $this->getServer()->getPluginManager()->getPlugin("PiggyFactions");
                                 if (!is_null($PiggyFactions)) {
                                     $faction = PlayerManager::getInstance()->getPlayer($onlineplayer)->getFaction();
@@ -242,26 +242,26 @@ class Main extends PluginBase implements Listener{
                     $itemID = (int) $effect["item"];
                     if($item->getId() === $itemID) {
                         foreach($this->getServer()->getOnlinePlayers() as $onlineplayer){
-                            if($entity !== $onlineplayer) {
-                                $distance = $entity->distance($onlineplayer);
-                                if ($distance <= 30){
-                                    $cooldown = $this->config->get("bard-cooldown");
-                                    $player = $entity->getName();
-                                    $effectName = (string) $effect["name"];
-                                    $playereffect = $player . ":" . $effectName;
-                                    if (isset($this->bardcooldown[$playereffect]) and time() - $this->bardcooldown[$playereffect] < $cooldown) {
-                                        $time = time() - $this->bardcooldown[$playereffect];
-                                        $count = $cooldown - $time;
-                                        $explode = explode(":",$playereffect);
-                                        $entity->sendMessage($explode[1] . " is on cooldown for " . $count . " seconds");
-                                    } else {
-                                        $effectID = Effect::getEffect((int) $effect["effect"]);
-                                        $duration = isset($effect["duration"]) ? (int) $effect["duration"] : 10;
-                                        $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] + 1: 1;
-                                        $entity->addEffect(new EffectInstance($effectID, $duration * 20, $amplifier - 1));
-                                        $item->pop();
-                                        $entity->getInventory()->setItemInHand($item);
-                                        $this->bardcooldown[$playereffect] = time();
+                            $distance = $entity->distance($onlineplayer);
+                            if ($distance <= 30){
+                                $cooldown = $this->config->get("bard-cooldown");
+                                $player = $entity->getName();
+                                $effectName = (string) $effect["name"];
+                                $playereffect = $player . ":" . $effectName;
+                                if (isset($this->bardcooldown[$playereffect]) and time() - $this->bardcooldown[$playereffect] < $cooldown) {
+                                    $time = time() - $this->bardcooldown[$playereffect];
+                                    $count = $cooldown - $time;
+                                    $explode = explode(":",$playereffect);
+                                    $entity->sendMessage($explode[1] . " is on cooldown for " . $count . " seconds");
+                                } else {
+                                    $effectID = Effect::getEffect((int) $effect["effect"]);
+                                    $duration = isset($effect["duration"]) ? (int) $effect["duration"] : 10;
+                                    $amplifier = isset($effect["amplifier"]) ? (int) $effect["amplifier"] + 1: 1;
+                                    $entity->addEffect(new EffectInstance($effectID, $duration * 20, $amplifier - 1));
+                                    $item->pop();
+                                    $entity->getInventory()->setItemInHand($item);
+                                    $this->bardcooldown[$playereffect] = time();
+                                    if($entity !== $onlineplayer) {
                                         $PiggyFactions = $this->getServer()->getPluginManager()->getPlugin("PiggyFactions");
                                         if (!is_null($PiggyFactions)) {
                                             $faction = PlayerManager::getInstance()->getPlayer($onlineplayer)->getFaction();
