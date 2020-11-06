@@ -151,44 +151,47 @@ class Main extends PluginBase implements Listener{
     public function onArmorChange(EntityArmorChangeEvent $event) {
         $entity = $event->getEntity();
         $oldItem = $event->getOldItem()->getId();
-        if($oldItem == 305 OR $oldItem == 304 OR $oldItem == 303 OR $oldItem == 302) {
-            $rogue = $this->config->get("rogue-armor");
-            foreach($rogue as $effect){
-                if(!isset($effect["effect"]))continue;
-                $effectID = $effect["effect"];
-                $entity->removeEffect($effectID);
+        if ($entity instanceof Player) {
+            if($event->getOldItem()->getId() === $event->getNewItem()->getId()) return;
+            if($oldItem == 305 OR $oldItem == 304 OR $oldItem == 303 OR $oldItem == 302) {
+                $rogue = $this->config->get("rogue-armor");
+                foreach($rogue as $effect){
+                    if(!isset($effect["effect"]))continue;
+                    $effectID = $effect["effect"];
+                    $entity->removeEffect($effectID);
+                }
             }
-        }
-        if($oldItem == 310 OR $oldItem == 311 OR $oldItem == 312 OR $oldItem == 313) {
-            $diamond = $this->config->get("diamond-armor");
-            foreach($diamond as $effect){
-                if(!isset($effect["effect"]))continue;
-                $effectID = $effect["effect"];
-                $entity->removeEffect($effectID);
+            if($oldItem == 310 OR $oldItem == 311 OR $oldItem == 312 OR $oldItem == 313) {
+                $diamond = $this->config->get("diamond-armor");
+                foreach($diamond as $effect){
+                    if(!isset($effect["effect"]))continue;
+                    $effectID = $effect["effect"];
+                    $entity->removeEffect($effectID);
+                }
             }
-        }
-        if($oldItem == 306 OR $oldItem == 307 OR $oldItem == 308 OR $oldItem == 309) {
-            $minor = $this->config->get("minor-armor");
-            foreach($minor as $effect){
-                if(!isset($effect["effect"]))continue;
-                $effectID = $effect["effect"];
-                $entity->removeEffect($effectID);
+            if($oldItem == 306 OR $oldItem == 307 OR $oldItem == 308 OR $oldItem == 309) {
+                $minor = $this->config->get("minor-armor");
+                foreach($minor as $effect){
+                    if(!isset($effect["effect"]))continue;
+                    $effectID = $effect["effect"];
+                    $entity->removeEffect($effectID);
+                }
             }
-        }
-        if($oldItem == 301 OR $oldItem == 300 OR $oldItem == 299 OR $oldItem == 298) {
-            $archer = $this->config->get("archer-armor");
-            foreach($archer as $effect){
-                if(!isset($effect["effect"]))continue;
-                $effectID = $effect["effect"];
-                $entity->removeEffect($effectID);
+            if($oldItem == 301 OR $oldItem == 300 OR $oldItem == 299 OR $oldItem == 298) {
+                $archer = $this->config->get("archer-armor");
+                foreach($archer as $effect){
+                    if(!isset($effect["effect"]))continue;
+                    $effectID = $effect["effect"];
+                    $entity->removeEffect($effectID);
+                }
             }
-        }
-        if($oldItem == 314 OR $oldItem == 315 OR $oldItem == 316 OR $oldItem == 317) {
-            $archer = $this->config->get("bard-armor");
-            foreach($archer as $effect){
-                if(!isset($effect["effect"]))continue;
-                $effectID = $effect["effect"];
-                $entity->removeEffect($effectID);
+            if($oldItem == 314 OR $oldItem == 315 OR $oldItem == 316 OR $oldItem == 317) {
+                $archer = $this->config->get("bard-armor");
+                foreach($archer as $effect){
+                    if(!isset($effect["effect"]))continue;
+                    $effectID = $effect["effect"];
+                    $entity->removeEffect($effectID);
+                }
             }
         }
     }
