@@ -1,5 +1,4 @@
-[![](https://poggit.pmmp.io/shield.state/HCF-Kits)](https://poggit.pmmp.io/p/HCF-Kits)
-<a href="https://poggit.pmmp.io/p/HCF-Kits"><img src="https://poggit.pmmp.io/shield.state/HCF-Kits"></a>
+**WARNING! BUG FOUND:** When using bard items, rigt clicking will only give the enhanced effects to 1 player instead of all the facion members. Will fix soon. This will not effect your server in any negative way.
 
 # HCF-Kits
 A HCF Kits/Classes plugin that introduces: Rogue, Bard, Diamond, Archer, Miner & Better PvP Pots!
