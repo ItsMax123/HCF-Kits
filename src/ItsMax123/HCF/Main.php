@@ -50,10 +50,11 @@ class Main extends PluginBase implements Listener{
         if($event instanceof EntityDamageByEntityEvent) {
             $cooldown = $this->config->get("backstab-cooldown");
             $victim = $event->getEntity();
+            if (!$victim instanceof Player) return;
             $victimn = $event->getEntity()->getName();
             $attacker = $event->getDamager();
+            if (!$attacker instanceof Player) return;
             $attackern = $event->getDamager()->getName();
-            if($victim instanceof Player and $attacker instanceof Player) {
                 if($attacker->getInventory()->getItemInHand()->getId() == 283 && $attacker->getArmorInventory()->getBoots()->getId() == 305 && $attacker->getArmorInventory()->getLeggings()->getId() == 304 && $attacker->getArmorInventory()->getChestplate()->getId() == 303 && $attacker->getArmorInventory()->getHelmet()->getId() == 302 && $attacker->getDirection() == $victim->getDirection()) {
                     if (isset($this->backstabcooldown[$attackern]) and time() - $this->backstabcooldown[$attackern] < $cooldown) {
                         $time = time() - $this->backstabcooldown[$attackern];
@@ -85,7 +86,6 @@ class Main extends PluginBase implements Listener{
                             }
                         }
                     }
-                }
             }
         }
     }
