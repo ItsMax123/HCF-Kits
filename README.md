@@ -1,4 +1,4 @@
-**WARNING! BUG FOUND:** When using bard items, rigt clicking will only give the enhanced effects to 1 player instead of all the facion members. Will fix soon. This will not effect your server in any negative way.
+**WARNING!** This is an old plugin that I thought I'd put on here. There might be bugs but I do not maintain this plugin. Feel free to steal or take inspiration from the code. But please do not use this plugin on your server.
 
 # HCF-Kits
 A HCF Kits/Classes plugin that introduces: Rogue, Bard, Diamond, Archer, Miner & Better PvP Pots!
